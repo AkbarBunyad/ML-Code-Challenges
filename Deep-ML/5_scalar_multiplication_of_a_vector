@@ -1,0 +1,8 @@
+def scalar_mul(matrix, scalar):
+    new_mat = [[0 for _ in range(len(matrix[0]))] for _ in range(len(matrix))]
+    for i in range(len(matrix)):
+        for j in range(len(matrix[0])):
+            new_mat[i][j] = matrix[i][j] * scalar
+    return new_mat
+
+print(scalar_mul([[1, 2, 4], [3, 4, 5]], 3))
