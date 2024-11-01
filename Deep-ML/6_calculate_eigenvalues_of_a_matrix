@@ -1,0 +1,12 @@
+def eigenvalue(matrix):
+    # Check if the matrix is square
+    if len(matrix) != len(matrix[0]):
+        return "Matrix is not square"
+    # Calculate the eigenvalues
+    a, b, c, d = matrix[0][0], matrix[0][1], matrix[1][0], matrix[1][1]
+    disc = (a + d) ** 2 - 4 * (a * d - b * c)
+    l_1 = (a + d + disc ** 0.5) / 2
+    l_2 = (a + d - disc ** 0.5) / 2
+    return l_1, l_2
+
+print(eigenvalue([[2, 1], [1, 2]]))
